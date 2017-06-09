@@ -1,2 +1,3 @@
-# holon-shared
-Holon Platform projects shared resources
+# Holon Platform shared resources
+
+Holon Platform projects shared resources.
