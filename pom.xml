@@ -75,6 +75,9 @@
 				<configuration>
 					<includes>
 						<include>**/*.html</include>
+						<include>**/*.css</include>
+						<include>**/*.jpg</include>
+						<include>**/*.png</include>
 					</includes>
 				</configuration>
 			</plugin>
