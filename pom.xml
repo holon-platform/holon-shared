@@ -78,6 +78,7 @@
 						<include>**/*.css</include>
 						<include>**/*.jpg</include>
 						<include>**/*.png</include>
+						<include>**/*.yml</include>
 					</includes>
 				</configuration>
 			</plugin>
