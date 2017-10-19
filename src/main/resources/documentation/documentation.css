@@ -113,7 +113,6 @@
   box-shadow: 5px 15px 15px -10px rgba(0, 0, 0, 0.1); }
 
 body.article {
-  font-family: 'Montserrat', Arial, sans-serif;
   color: #131111;
   font-size: 15px; }
   body.article p {
@@ -128,12 +127,10 @@ body.article {
     font-weight: 400; }
   body.article h1, body.article h2, body.article h3, body.article #toctitle, body.article .sidebarblock > .content > .title, body.article .sidebarblock > .content > h2, body.article h4, body.article h5, body.article h6,
   body.article #toc ul {
-    font-family: 'Montserrat', Arial, sans-serif;
     color: #131111; }
   body.article h2 {
     color: #131111; }
   body.article .admonitionblock td.content > .title, body.article .admonitionblock td.content > h2, body.article .audioblock > .title, body.article .audioblock > h2, body.article .exampleblock > .title, body.article .exampleblock > h2, body.article .imageblock > .title, body.article .imageblock > h2, body.article .listingblock > .title, body.article .listingblock > h2, body.article .literalblock > .title, body.article .literalblock > h2, body.article .stemblock > .title, body.article .stemblock > h2, body.article .openblock > .title, body.article .openblock > h2, body.article .paragraph > .title, body.article .paragraph > h2, body.article .quoteblock > .title, body.article .quoteblock > h2, body.article table.tableblock > .title, body.article table.tableblock > h2, body.article .verseblock > .title, body.article .verseblock > h2, body.article .videoblock > .title, body.article .videoblock > h2, body.article .dlist > .title, body.article .dlist > h2, body.article .olist > .title, body.article .olist > h2, body.article .ulist > .title, body.article .ulist > h2, body.article .qlist > .title, body.article .qlist > h2, body.article .hdlist > .title, body.article .hdlist > h2 {
-    font-family: 'Montserrat', Arial, sans-serif;
     color: #131111; }
   body.article #preamble em {
     font-style: normal; }
