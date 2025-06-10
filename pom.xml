@@ -1,4 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.holon-platform</groupId>
@@ -37,22 +39,23 @@
 	<scm>
 		<connection>scm:git:https://github.com/holon-platform/holon-shared.git</connection>
 		<url>https://github.com/holon-platform/holon-shared</url>
-		<developerConnection>scm:git:https://github.com/holon-platform/holon-shared.git</developerConnection>
-	  <tag>HEAD</tag>
-  </scm>
+		<developerConnection>
+			scm:git:https://github.com/holon-platform/holon-shared.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		
-		<maven.compiler.release>11</maven.compiler.release>
 
-		<maven-remote-resources-plugin.version>1.6.0</maven-remote-resources-plugin.version>
+		<maven.compiler.release>21</maven.compiler.release>
 
-		<maven-source-plugin.version>3.0.1</maven-source-plugin.version>
-		<maven-javadoc-plugin.version>3.1.0</maven-javadoc-plugin.version>
-		<maven-release-plugin.version>2.5.3</maven-release-plugin.version>
-		<maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
-		<nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
+		<maven-remote-resources-plugin.version>3.2.0</maven-remote-resources-plugin.version>
+
+		<maven-source-plugin.version>3.3.1</maven-source-plugin.version>
+		<maven-javadoc-plugin.version>3.10.1</maven-javadoc-plugin.version>
+		<maven-release-plugin.version>3.1.1</maven-release-plugin.version>
+		<maven-gpg-plugin.version>3.2.7</maven-gpg-plugin.version>
+		<nexus-staging-maven-plugin.version>1.7.0</nexus-staging-maven-plugin.version>
 
 		<!-- Git scm server id in settings.xml -->
 		<project.scm.id>git-scm-server</project.scm.id>
@@ -148,7 +151,8 @@
 				<repository>
 					<id>sonatype-nexus-staging</id>
 					<name>Nexus release repository</name>
-					<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+					<url>
+						https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
 				</repository>
 			</distributionManagement>
 			<build>
