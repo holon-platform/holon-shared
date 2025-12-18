@@ -1,4 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.holon-platform</groupId>
@@ -53,7 +55,9 @@
 		<maven-javadoc-plugin.version>3.10.1</maven-javadoc-plugin.version>
 		<maven-release-plugin.version>3.1.1</maven-release-plugin.version>
 		<maven-gpg-plugin.version>3.2.7</maven-gpg-plugin.version>
-		<nexus-staging-maven-plugin.version>1.7.0</nexus-staging-maven-plugin.version>
+		<!--
+		<nexus-staging-maven-plugin.version>1.7.0</nexus-staging-maven-plugin.version> -->
+		<sonatype-maven-plugin.version>0.9.0</sonatype-maven-plugin.version>
 
 		<!-- Git scm server id in settings.xml -->
 		<project.scm.id>git-scm-server</project.scm.id>
@@ -134,7 +138,8 @@
 						</execution>
 					</executions>
 				</plugin>
-				<!-- Nexus staging -->
+				
+				<!-- Nexus staging (OLD)
 				<plugin>
 					<groupId>org.sonatype.plugins</groupId>
 					<artifactId>nexus-staging-maven-plugin</artifactId>
@@ -145,7 +150,19 @@
 						<nexusUrl>https://oss.sonatype.org/</nexusUrl>
 						<autoReleaseAfterClose>true</autoReleaseAfterClose>
 					</configuration>
+				</plugin> 
+				-->
+				<plugin>
+					<groupId>org.sonatype.central</groupId>
+					<artifactId>central-publishing-maven-plugin</artifactId>
+					<version>${sonatype-maven-plugin.version}</version>
+					<extensions>true</extensions>
+					<configuration>
+						<publishingServerId>central</publishingServerId>
+						<autoPublish>true</autoPublish>
+					</configuration>
 				</plugin>
+
 			</plugins>
 		</pluginManagement>
 	</build>
@@ -159,7 +176,7 @@
 					<id>sonatype-nexus-staging</id>
 					<name>Nexus release repository</name>
 					<url>
-						https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+						https://ossrh-staging-api.central.sonatype.com/service/local/staging/deploy/maven2/</url>
 				</repository>
 			</distributionManagement>
 			<build>
